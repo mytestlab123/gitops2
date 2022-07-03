@@ -1,0 +1,18 @@
+commit: "3afb946e94372459f0993af62466b3f16109580b"
+buildDate: "20220519054218"
+image: "651281726850.dkr.ecr.ap-southeast-1.amazonaws.com/sling"
+
+namespace: prod
+
+replicas: 2
+
+nodeAffinity:
+  nodegroup:
+    public: [ 
+      public-a-on-demand, 
+      public-b-on-demand, 
+      public-c-on-demand, 
+      public-a-spot, 
+      public-b-spot, 
+      public-c-spot 
+    ]
